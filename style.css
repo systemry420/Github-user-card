@@ -3,6 +3,52 @@
 body {
     font-family: 'Poppins';
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6060bd;
+}
+
+input {
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+#main {
+    width: 800px;
+    height: 500px;
+}
+
+.card {
     background-color: #2a2a72;
     background-color: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    color: #fff;
+    display: flex;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px black;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    padding: 0.5rem;
 }
