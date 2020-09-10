@@ -52,3 +52,19 @@ ul {
 ul li {
     padding: 0.5rem;
 }
+
+.repos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.repos a{
+    background: #080861;
+    margin: 0.25rem;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+}

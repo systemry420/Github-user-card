@@ -11,8 +11,30 @@ async function getUsers(user){
     const response = await fetch(APIURL + user);
     const result = await response.json();
 
-    console.log(result);
     showCard(result);
+    getRepos(user);
+}
+
+async function getRepos(user){
+    const response = await fetch(APIURL + user + '/repos');
+    const result = await response.json();
+
+    console.log(result);
+    showRepos(result);
+}
+
+function showRepos(repos){
+    const reposEl = document.getElementById("repos");
+
+    repos.slice(0,10).forEach(repo => {
+        const repoEl = document.createElement('a');
+        reposEl.classList.add('repo');
+
+        repoEl.href = repo.html_url;
+        repoEl.innerHTML = repo.name;
+
+        reposEl.appendChild(repoEl);
+    });
 }
 
 
@@ -31,6 +53,10 @@ function showCard(user){
                     <li>${user.followers} followers</li>
                     <li>${user.following} following</li>
                     <li>${user.public_repos} repos</li>
+                </ul>
+
+                <ul class="repos" id="repos">
+                </ul>
             </div>
         </div>
     `;
